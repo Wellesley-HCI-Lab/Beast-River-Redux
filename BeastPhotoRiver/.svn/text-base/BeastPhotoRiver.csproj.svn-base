@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7256A6D-9CA9-4249-83E1-92072D2C4D86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BeastPhotoRiver</RootNamespace>
+    <AssemblyName>BeastPhotoRiver</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Surface" />
+    <Reference Include="Microsoft.Surface.Presentation" />
+    <Reference Include="Microsoft.Surface.Presentation.Generic" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DiscussLayer.xaml.cs">
+      <DependentUpon>DiscussLayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drawer.xaml.cs">
+      <DependentUpon>Drawer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmailWindow.xaml.cs">
+      <DependentUpon>EmailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputDevice.cs" />
+    <Compile Include="Keyboard.cs" />
+    <Page Include="DiscussLayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drawer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EmailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhotoCard\PhotoCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhotoCard\Thumbnail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanLayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="River.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SurfaceWindow1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PhotoCard\PhotoCard.xaml.cs">
+      <DependentUpon>PhotoCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoCard\Thumbnail.xaml.cs">
+      <DependentUpon>Thumbnail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoGrabber.cs" />
+    <Compile Include="PlanLayer.xaml.cs">
+      <DependentUpon>PlanLayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="River.xaml.cs">
+      <DependentUpon>River.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SurfaceWindow1.xaml.cs">
+      <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wooden-panel.jpg" />
+    <Resource Include="Resources\wooden-panel2.jpg" />
+    <Resource Include="Resources\wooden-panel3.jpg" />
+    <Resource Include="Resources\wooden-panel4.jpg" />
+    <Resource Include="Resources\wooden-panel5.jpg" />
+    <Resource Include="Resources\spiral.jpg" />
+    <Resource Include="Resources\wood.jpg" />
+    <Resource Include="Resources\tower.jpg" />
+    <Resource Include="Resources\stock_lock.png" />
+    <Resource Include="Resources\stock_lock_open.png" />
+    <Resource Include="Resources\goldstar.png" />
+    <Resource Include="Resources\graystar.png" />
+    <Resource Include="Resources\cork.jpg" />
+    <Resource Include="Resources\blackcircles.jpg" />
+    <Resource Include="Resources\blues-stripes.jpg" />
+    <Resource Include="Resources\brown.jpg" />
+    <Resource Include="Resources\geoblack.jpg" />
+    <Resource Include="Resources\hall.jpg" />
+    <Content Include="Resources\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BeastPhotoRiver.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\iconPreview.png" />
+    <Resource Include="Resources\pebbles-in-water.jpg" />
+    <Resource Include="Resources\MungerLivingRoom.jpg" />
+    <Resource Include="Resources\MungerMultiFaith.jpg" />
+    <Resource Include="Resources\lock.png" />
+    <Resource Include="Resources\LeakyBeaker.jpg" />
+    <Content Include="Resources\PhotoRiverSound.wav" />
+    <Resource Include="Resources\pond2.jpg" />
+    <Resource Include="Resources\rcks.jpg" />
+    <Resource Include="Resources\river.png" />
+    <Resource Include="Resources\riverBackground.jpg" />
+    <Resource Include="Resources\WindowBackground.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

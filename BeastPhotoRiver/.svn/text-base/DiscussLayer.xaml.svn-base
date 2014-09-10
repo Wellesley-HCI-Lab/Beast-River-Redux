@@ -1,0 +1,102 @@
+﻿<s:ScatterView x:Class="BeastPhotoRiver.DiscussLayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="1850" d:DesignWidth="3240" >
+    
+        <!--DiscussScatterView: For 1 team to discuss layout of photos to everyone while 2 teams can actively interact with presenting teams items-->
+    <s:ScatterView.Background>
+        <ImageBrush ImageSource="/BeastPhotoRiver;component/Resources/wooden-panel4.jpg" Stretch="UniformToFill" TileMode="None" />
+    </s:ScatterView.Background>
+
+    <s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="535,925"
+                CanMove="False" 
+                CanRotate="False"
+                CanScale="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False">
+                <Image x:Name="PresentImage1" Source="Resources\LeakyBeaker.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                x:Name="Team1Lock"
+                Visibility="Visible"
+                CanMove="False"
+                CanRotate="False"
+                CanScale="False"
+                Center="300,925"
+                Height="50"
+                Width="50">
+                <s:SurfaceButton  Click="LockButton_Click">
+                    <s:SurfaceButton.Background>
+                        <ImageBrush ImageSource="/BeastPhotoRiver;component/Resources/lock.png" Stretch="UniformToFill" TileMode="None" />
+                    </s:SurfaceButton.Background>
+                </s:SurfaceButton>
+            </s:ScatterViewItem>
+
+            <s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="1615,925" 
+                CanMove="False" 
+                CanRotate="False"
+                CanScale="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False">
+        <Image x:Name="PresentImage2" Source="Resources\LeakyBeaker.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                x:Name="Team2Lock"
+                Visibility="Collapsed"
+                CanMove="False"
+                CanRotate="False"
+                CanScale="False"
+                Center="1320,925"
+                Height="50"
+                Width="50">
+            <s:SurfaceButton Click="LockButton_Click">
+                    <s:SurfaceButton.Background>
+                        <ImageBrush ImageSource="/BeastPhotoRiver;component/Resources/lock.png" Stretch="UniformToFill" TileMode="None" />
+                    </s:SurfaceButton.Background>
+                </s:SurfaceButton>
+            </s:ScatterViewItem>
+
+            <s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="2690,925" 
+                CanMove="False" 
+                CanRotate="False"
+                CanScale="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False">
+        <Image x:Name="PresentImage3" Source="Resources\LeakyBeaker.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                x:Name="Team3Lock"
+                Visibility="Collapsed"
+                CanMove="False"
+                CanRotate="False"
+                CanScale="False"
+                Center="2600,925"
+                Height="50"
+                Width="50">
+        <s:SurfaceButton Click="LockButton_Click">
+                    <s:SurfaceButton.Background>
+                        <ImageBrush ImageSource="/BeastPhotoRiver;component/Resources/lock.png" Stretch="UniformToFill" TileMode="None" />
+                    </s:SurfaceButton.Background>
+                </s:SurfaceButton>
+            </s:ScatterViewItem>
+       
+</s:ScatterView>

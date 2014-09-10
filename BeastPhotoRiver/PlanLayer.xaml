@@ -1,0 +1,231 @@
+﻿<s:ScatterView x:Class="BeastPhotoRiver.PlanLayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             mc:Ignorable="d" 
+              
+             d:DesignHeight="1850" d:DesignWidth="1070" >
+
+    <s:ScatterView.Background>
+        <ImageBrush ImageSource="Resources/wooden-panel5.jpg" Stretch="UniformToFill" TileMode="None" />
+    </s:ScatterView.Background>
+
+    <!--Team 1 Layer 2-->
+            <s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="535,925"
+                CanMove="False" 
+                CanScale="False"
+                CanRotate="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                Name="PlanTeam1Pic">
+                <Image x:Name="Team1Image" Source="Resources\LeakyBeaker.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="535,925"
+                CanMove="False" 
+                CanScale="False"
+                Background="Transparent"
+                x:Name="T1Ready"
+                Visibility="Collapsed"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                >
+                <StackPanel>
+                    <Label FontSize="24" 
+                           Margin="100,30,30,30">
+                        Team blah would like to present. 
+                        You ready?
+                    </Label>
+
+                    <s:SurfaceButton
+                        x:Name="Sure1"
+                        Height="100" 
+                        FontSize="24"
+                        HorizontalContentAlignment="Center">
+                        Sure
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton 
+                        FontSize="24"
+                        Height="100" 
+                        Click="NotYetButton_Click"
+                        HorizontalContentAlignment="Center">
+                        Not yet...
+                    </s:SurfaceButton>
+
+                </StackPanel>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="535,925"
+                CanScale="False"
+                CanMove="False" 
+                Background="Transparent"
+                x:Name="T1NoAlert"
+                Visibility="Collapsed"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                >
+                <StackPanel>
+                    <Label FontSize="60">Not Yet. Sorry :/</Label>
+                    <s:SurfaceButton >OK</s:SurfaceButton>
+                </StackPanel>
+            </s:ScatterViewItem>
+
+            <!--Team 2 Layer 2-->
+            <!--<s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="500,925" 
+                CanMove="False" 
+                CanScale="False"
+                CanRotate="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                Name="PlanTeam2Pic">
+                <Image x:Name="Team2Image" Source="Resources\MungerMultiFaith.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                x:Name="T2Ready"
+                Visibility="Collapsed"
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="500,925"
+                CanMove="False" 
+                CanScale="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                >
+                <StackPanel>
+                    <Label FontSize="24" 
+                           Margin="100,30,30,30">
+                        Team blah would like to present. 
+                        You ready?
+                    </Label>
+
+                    <s:SurfaceButton
+                        x:Name="Sure2"
+                        Height="100" 
+                        FontSize="24"
+                        HorizontalContentAlignment="Center">
+                        Sure
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton 
+                        FontSize="24"
+                        Height="100" 
+                        Click="NotYetButton_Click"
+                        HorizontalContentAlignment="Center">
+                        Not yet...
+                    </s:SurfaceButton>
+
+                </StackPanel>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="500,925"
+                CanMove="False" 
+                CanScale="False"
+                Background="Transparent"
+                x:Name="T2NoAlert"
+                Visibility="Collapsed"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                >
+                <StackPanel>
+                    <Label FontSize="60">Not Yet. Sorry :/</Label>
+                    <s:SurfaceButton >OK</s:SurfaceButton>
+                </StackPanel>
+            </s:ScatterViewItem>
+
+            
+            <s:ScatterViewItem 
+                Width="1070"
+                Height="1850"
+                Orientation="0"
+                Center="500,925" 
+                CanMove="False" 
+                CanScale="False"
+                CanRotate="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                Name="PlanTeam3Pic">
+                <Image x:Name="Team3Image" Source="Resources\tower.jpg" ></Image>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                x:Name="T3Ready"
+                Visibility="Collapsed"
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="500,925"
+                CanMove="False" 
+                CanScale="False"
+                Background="Transparent"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False">
+                <StackPanel>
+                    <Label FontSize="24" 
+                           Margin="100,30,30,30">
+                        Team blah would like to present. 
+                        You ready?
+                    </Label>
+
+                    <s:SurfaceButton
+                        x:Name="Sure3"
+                        Height="100" 
+                        FontSize="24"
+                        HorizontalContentAlignment="Center">
+                        Sure
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton 
+                        FontSize="24"
+                        Height="100" 
+                        Click="NotYetButton_Click"
+                        HorizontalContentAlignment="Center">
+                        Not yet...
+                    </s:SurfaceButton>
+
+                </StackPanel>
+            </s:ScatterViewItem>
+            <s:ScatterViewItem 
+                Width="500"
+                Height="500"
+                Orientation="90"
+                Center="2700,925"
+                CanMove="False" 
+                CanScale="False"
+                Background="Transparent"
+                x:Name="T3NoAlert"
+                Visibility="Collapsed"
+                IsTopmostOnActivation="False"
+                ShowsActivationEffects="False"
+                >
+                <StackPanel>
+                    <Label FontSize="60">Not Yet. Sorry :/</Label>
+                    <s:SurfaceButton >OK</s:SurfaceButton>
+                </StackPanel>
+            </s:ScatterViewItem>-->
+        
+    
+</s:ScatterView>

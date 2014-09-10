@@ -1,0 +1,89 @@
+﻿<s:SurfaceWindow x:Class="BeastPhotoRiver.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:photocard="clr-namespace:BeastPhotoRiver.PhotoCard"
+    xmlns:local="clr-namespace:BeastPhotoRiver"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"                  
+    Title="BeastPx"  
+    WindowStyle="None" 
+    WindowState="Maximized" 
+    Topmost="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+     
+
+    <Grid x:Name="MainGrid" Width="3240" Height="1850">
+             
+        <local:River></local:River>
+        
+        <!--River ScatterView: Holder of all photocards from River-->
+        <s:ScatterView x:Name="RiverScatterView" Background="Transparent" Height="1850">
+        </s:ScatterView>
+
+        <!--PlanScatterView: For 3 teams to discuss layout of photos-->
+        <local:PlanLayer x:Name="PlanScatterViewLeft" Visibility="Collapsed" Width="1080" HorizontalAlignment="Left"></local:PlanLayer>
+        <local:PlanLayer x:Name="PlanScatterViewMiddle" Visibility="Collapsed" Width="1080"></local:PlanLayer>
+        <local:PlanLayer x:Name="PlanScatterViewRight" Visibility="Collapsed" Width="1080" HorizontalAlignment="Right"></local:PlanLayer>
+
+        <!--DiscussScatterView: For 1 team to discuss layout of photos to everyone while 2 teams can actively interact with presenting teams items-->
+        <local:DiscussLayer x:Name="DiscussScatterView" Visibility="Collapsed"></local:DiscussLayer>
+
+        <!--<local:DiscussLayer x:Name="DiscussScatterViewMiddle" Visibility="Collapsed"></local:DiscussLayer>
+
+        <local:DiscussLayer x:Name="DiscussScatterViewLeft" Visibility="Collapsed" HorizontalAlignment="Left"></local:DiscussLayer>
+        <local:DiscussLayer x:Name="DiscussScatterViewRight" Visibility="Collapsed" HorizontalAlignment="Right"></local:DiscussLayer>-->
+       
+        <!--Drawers that show up on all modes-->
+        <!-- Things that are defined and different here include:
+            1Color of grid background
+            2Margin of scatterview
+            3Deceleration needs tobe consistent?
+            4Top need stob 180 oreintatoin
+            5Center ="395,300" ?-->
+
+        <!--Top1-->
+        <local:Drawer x:Name="TopDrawer1"
+                       Margin="0,-250,2147,1808" 
+                       >
+
+        </local:Drawer>
+
+
+        <!--Top2-->
+        <local:Drawer x:Name="TopDrawer2"
+                       Margin="1097,-250,1043,1808" 
+                        >
+
+        </local:Drawer>
+
+        <!--Top3-->
+        <local:Drawer x:Name="TopDrawer3"
+                       Margin="2193,-250,13,1810" 
+                       >
+
+        </local:Drawer>
+
+        <!--Top4-->
+        <!--Bottom1-->
+        <local:Drawer x:Name="BottomDrawer1"
+                      Margin="0,1787,2160,-150" Visibility="Hidden">
+        </local:Drawer>
+                          
+        
+        
+        <!--Bottom2-->
+        <local:Drawer x:Name="BottomDrawer2"
+                      Margin="1080,1787,1080,-150">
+        </local:Drawer>
+
+        <!--Bottom3-->
+        <local:Drawer x:Name="BottomDrawer3"
+                       Margin="0,1787,28,-150" HorizontalAlignment="Right" Width="1050">
+        </local:Drawer>
+
+
+
+        <!--Bottom4-->
+    </Grid>
+    
+</s:SurfaceWindow>

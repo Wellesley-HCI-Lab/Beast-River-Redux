@@ -1,0 +1,14 @@
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\Drawer.baml
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\EmailWindow.baml
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\River.baml
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\App.baml
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\Drawer.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\EmailWindow.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\River.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\App.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\REDUX_Content.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\REDUX_MarkupCompile.cache
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\REDUX_MarkupCompile.lref
+C:\Users\beast-jr\Documents\GitHub\Beast-River-Redux\REDUX\obj\Debug\REDUX.csprojResolveAssemblyReference.cache

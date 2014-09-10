@@ -1,0 +1,11 @@
+﻿<s:SurfaceWindow x:Class="REDUX.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Title="REDUX"
+    xmlns:local="clr-namespace:BeastPhotoRiver"
+    >
+  <Grid>
+        <local:River></local:River>
+    </Grid>
+</s:SurfaceWindow>

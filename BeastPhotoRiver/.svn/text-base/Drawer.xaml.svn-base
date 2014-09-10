@@ -1,0 +1,105 @@
+﻿<s:ScatterViewItem x:Class="BeastPhotoRiver.Drawer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             mc:Ignorable="d" 
+             CanMove="False"
+             CanRotate="False"
+             CanScale="False"
+             Background="Transparent"
+             d:DesignHeight="288" d:DesignWidth="1080"
+                   >
+    
+        <s:ScatterView Background="Transparent" 
+                       Visibility="Visible"                        
+                       Name="Track"
+                BorderThickness="5">
+            
+            <s:ScatterViewItem
+                x:Name="DrawerSVI"
+                Height="400" Width="1080" Center="540,150" 
+                Orientation="0" 
+                CanRotate="False" 
+                IsContainerActive="False"
+                ShowsActivationEffects="False"
+                CanScale="False"
+                ContainerManipulationDelta="DrawerSVI_ContainerManipulationDelta"
+                ContainerManipulationCompleted="DrawerSVI_ContainerManipulationCompleted"  
+                BorderBrush="Black"
+                BorderThickness="1"
+                
+                >
+                
+                <Grid  Visibility="Visible" HorizontalAlignment="Left">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="375" />
+                        <ColumnDefinition Width="330" />
+                        <ColumnDefinition Width="375" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="350"/>
+                    <RowDefinition Height="8*" />
+                </Grid.RowDefinitions>
+               
+                    <StackPanel Grid.Column="1" 
+                                Orientation="Horizontal"
+                                >                    
+
+                    <s:SurfaceButton x:Name="ToRiver"
+                                             Background="SkyBlue"
+                                             Width="110" 
+                                           Content="Browse" 
+                                             HorizontalContentAlignment="Center" 
+                                             HorizontalAlignment="Left" 
+                                            BorderThickness="1" 
+                                            BorderBrush="Gray"
+                                            Click="RiverButton_Click" 
+                                     VerticalContentAlignment="Center" />
+                    
+                    <s:SurfaceButton x:Name="ToPlan"  
+                                             Width="110" 
+                                             Background="#FFB79263" 
+                                             Content="Plan " 
+                                           BorderThickness="1" 
+                                           BorderBrush="Gray"
+                                             HorizontalContentAlignment="Center" 
+                                             HorizontalAlignment="Center" 
+                                     
+                                           Click="PlanButton_Click" VerticalContentAlignment="Center" />
+
+                    <s:SurfaceButton  x:Name="ToDiscuss" Width="110"  
+                                             Background="#FFB79263" 
+                                             Content="Discuss" 
+                                             HorizontalContentAlignment="Center" 
+                                             HorizontalAlignment="Right" 
+                                            BorderThickness="1" 
+                                            BorderBrush="Gray"
+                                            Click="ToDiscuss_Checked" 
+                                      />
+                </StackPanel>
+                    
+                    <s:ScatterView x:Name="ActualDrawer" 
+                                   Grid.Row="1" 
+                                   Grid.ColumnSpan="3" 
+                                   BorderBrush="Black"
+                                   BorderThickness="1">
+                    <s:ScatterView.Background>
+                        <ImageBrush ImageSource="/BeastPhotoRiver;component/Resources/cork.jpg" Stretch="UniformToFill" TileMode="None" />
+                    </s:ScatterView.Background>
+                </s:ScatterView>
+            </Grid>
+            <s:ScatterViewItem.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5A2C06" Offset="0" />
+                    <GradientStop Color="Transparent" Offset="0.481" />
+                </LinearGradientBrush>
+            </s:ScatterViewItem.Background>
+        </s:ScatterViewItem>
+        </s:ScatterView>
+    
+</s:ScatterViewItem>
