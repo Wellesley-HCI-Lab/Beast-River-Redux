@@ -74,7 +74,7 @@
                 
             </s:SurfaceButton>
 
-            <s:SurfaceButton
+            <!--<s:SurfaceButton
                 x:Name="VoteButton"
                 Visibility="Visible"
                 Background="WhiteSmoke"
@@ -83,7 +83,7 @@
                 HorizontalContentAlignment="Center"
                 Margin="3, 265, 3, 3"  
                 Content="Write your thoughts about pic" 
-                Click="VoteButton_Click"/>
+                Click="VoteButton_Click"/>-->
 
             <!--end Front Grid. If you want to style the back grid, put it after this-->
 

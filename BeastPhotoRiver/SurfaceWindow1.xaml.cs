@@ -183,7 +183,7 @@ namespace BeastPhotoRiver
             //                                else
             //                                    RiverScatterView.Items.Add(copyCard);
             //                                BottomDrawer1.ActualDrawer.Items.Remove(t);
-            //                                copyCard.Center = new Point(_random.Next(0, END_OF_FIRST_DRAWER), _random.Next(925, 1850));
+            //                                copyCard.Center = new Point(_random.Next(0, END_OF_FIRST_DRAWER), _random.Next(925, auto));
 
             //                            }));
             //                    }
@@ -247,18 +247,18 @@ namespace BeastPhotoRiver
 
         private void SetDrawers()
         {
-            TopDrawer1._surfaceWindow = this;
+            //TopDrawer1._surfaceWindow = this;
 
-            TopDrawer1.setTop();
-            TopDrawer2._surfaceWindow = this;
-            TopDrawer2.setTop();
-            TopDrawer3._surfaceWindow = this;
-            TopDrawer3.setTop();
+            //TopDrawer1.setTop();
+            //TopDrawer2._surfaceWindow = this;
+            //TopDrawer2.setTop();
+            //TopDrawer3._surfaceWindow = this;
+            //TopDrawer3.setTop();
 
 
-            BottomDrawer1._surfaceWindow = this;
-            BottomDrawer2._surfaceWindow = this;
-            BottomDrawer3._surfaceWindow = this;
+            //BottomDrawer1._surfaceWindow = this;
+            //BottomDrawer2._surfaceWindow = this;
+            //BottomDrawer3._surfaceWindow = this;
 
         }
 
@@ -356,8 +356,9 @@ namespace BeastPhotoRiver
             imageCard.Name = "play";
             imageCard.CanScale = false;
             imageCard.ContainerManipulationStarted += new ContainerManipulationStartedEventHandler(svi_ContainerManipulationStarted);
-            imageCard.Center = new Point(300 * i, 1000);
-            //imageCard.Center = new Point(300 * i, 500); //comment out if not on Consuelo laptop
+            ///imageCard.Center = new Point(300 * i, 1000);
+            //imageCard.Center = new Point(300 * i, 500);
+            imageCard.Center = new Point(300 * i, this.ActualHeight / 2);
             imageCard.Orientation = 90;
 
             this.RiverScatterView.Items.Add(imageCard);
@@ -486,6 +487,7 @@ namespace BeastPhotoRiver
 
                 ScatterView currentParent = cardThrownInFromMainSV.Parent as ScatterView;
 
+                /*
                 //for copying into drawer
                 if (yPoint > 1700) //bottom half of screen
                 {
@@ -535,7 +537,7 @@ namespace BeastPhotoRiver
                     }
 
                 }
-
+                */
 
                 copyCard._thumbnail.ContainerManipulationCompleted += new ContainerManipulationCompletedEventHandler(SavedSVI_ContainerManipulationCompleted);
             }
@@ -550,6 +552,8 @@ namespace BeastPhotoRiver
         /// <param name="e"></param>
         void SavedSVI_ContainerManipulationCompleted(object sender, ContainerManipulationCompletedEventArgs e)
         {
+
+            /*
             Thumbnail thumbnailInDrawer = (Thumbnail)sender;
             PhotoCard.PhotoCard cardBeingTakenFromDrawer = thumbnailInDrawer.MyPhotoCard;
             ScatterView parentSV = thumbnailInDrawer.Parent as ScatterView;
@@ -583,7 +587,7 @@ namespace BeastPhotoRiver
                         else
                             RiverScatterView.Items.Add(copyCard);
                         BottomDrawer1.ActualDrawer.Items.Remove(thumbnailInDrawer);
-                        copyCard.Center = new Point(_random.Next(0, END_OF_FIRST_DRAWER), _random.Next(925, 1850));
+                        copyCard.Center = new Point(_random.Next(0, END_OF_FIRST_DRAWER), _random.Next(925, auto));
                         break;
                     case "BottomDrawer2":
                         if (PlanScatterViewMiddle.Visibility == Visibility.Visible)
@@ -593,7 +597,7 @@ namespace BeastPhotoRiver
                         else
                             RiverScatterView.Items.Add(copyCard);
                         BottomDrawer2.ActualDrawer.Items.Remove(thumbnailInDrawer);
-                        copyCard.Center = new Point(_random.Next(END_OF_FIRST_DRAWER, END_OF_SECOND_DRAWER), _random.Next(925, 1850));
+                        copyCard.Center = new Point(_random.Next(END_OF_FIRST_DRAWER, END_OF_SECOND_DRAWER), _random.Next(925, auto));
                         break;
                     case "BottomDrawer3":
                         if (PlanScatterViewRight.Visibility == Visibility.Visible)
@@ -603,7 +607,7 @@ namespace BeastPhotoRiver
                         else
                             RiverScatterView.Items.Add(copyCard);
                         BottomDrawer3.ActualDrawer.Items.Remove(thumbnailInDrawer);
-                        copyCard.Center = new Point(_random.Next(END_OF_SECOND_DRAWER, END_OF_THIRD_DRAWER), _random.Next(925, 1850));
+                        copyCard.Center = new Point(_random.Next(END_OF_SECOND_DRAWER, END_OF_THIRD_DRAWER), _random.Next(925, auto));
                         break;
                     case "TopDrawer1":
                         if (PlanScatterViewLeft.Visibility == Visibility.Visible)
@@ -639,6 +643,7 @@ namespace BeastPhotoRiver
                         break;
                 }
             }
+            */
         }
 
         #endregion
@@ -687,16 +692,16 @@ namespace BeastPhotoRiver
             //    (yCoord >= 0 && yCoord < 925))
             //    octantNum = 4;
             //else if ((xCoord >= 0 && xCoord < 810) &&
-            //     (yCoord >= 925 && yCoord < 1850))
+            //     (yCoord >= 925 && yCoord < auto))
             //    octantNum = 5;
             //else if ((xCoord >= 810 && xCoord < 1620) &&
-            //     (yCoord >= 925 && yCoord < 1850))
+            //     (yCoord >= 925 && yCoord < auto))
             //    octantNum = 6;
             //else if ((xCoord >= 1620 && xCoord < 2430) &&
-            //      (yCoord >= 925 && yCoord < 1850))
+            //      (yCoord >= 925 && yCoord < auto))
             //    octantNum = 7;
             //else if ((xCoord >= 2430 && xCoord < 3240) &&
-            //      (yCoord >= 925 && yCoord < 1850))
+            //      (yCoord >= 925 && yCoord < auto))
             //    octantNum = 8;
             //else
             //    octantNum = 0;//not within Beast screen boundary or all the way on the edge
@@ -827,24 +832,24 @@ namespace BeastPhotoRiver
             switch(switchingto)
             {
                case "river" :
-                    TopDrawer1.SyncButtonsForRiver();
-                    BottomDrawer1.SyncButtonsForRiver();
+                    //TopDrawer1.SyncButtonsForRiver();
+                    //BottomDrawer1.SyncButtonsForRiver();
 
-                    TopDrawer2.SyncButtonsForRiver();
-                    BottomDrawer2.SyncButtonsForRiver();
+                    //TopDrawer2.SyncButtonsForRiver();
+                    //BottomDrawer2.SyncButtonsForRiver();
 
-                    TopDrawer3.SyncButtonsForRiver();
-                    BottomDrawer3.SyncButtonsForRiver();
+                    //TopDrawer3.SyncButtonsForRiver();
+                    //BottomDrawer3.SyncButtonsForRiver();
                    break;
                case "plan":                   
-                    TopDrawer1.SyncButtonForPlan();
-                    BottomDrawer1.SyncButtonForPlan();
+                    //TopDrawer1.SyncButtonForPlan();
+                    //BottomDrawer1.SyncButtonForPlan();
                    
-                    TopDrawer2.SyncButtonForPlan();
-                    BottomDrawer2.SyncButtonForPlan();
+                    //TopDrawer2.SyncButtonForPlan();
+                    //BottomDrawer2.SyncButtonForPlan();
                    
-                    TopDrawer3.SyncButtonForPlan();
-                    BottomDrawer3.SyncButtonForPlan();                   
+                    //TopDrawer3.SyncButtonForPlan();
+                    //BottomDrawer3.SyncButtonForPlan();                   
                    break;
                default:
                    break;
@@ -865,33 +870,33 @@ namespace BeastPhotoRiver
                 {
                     PlanScatterViewLeft.Visibility = Visibility.Collapsed;
                     //sync buttons
-                    TopDrawer1.SyncButtonsForRiver();
-                    BottomDrawer1.SyncButtonsForRiver();
+                    //TopDrawer1.SyncButtonsForRiver();
+                    //BottomDrawer1.SyncButtonsForRiver();
                 }
                 else if (drawer.Contains("2"))
                 {
                     PlanScatterViewMiddle.Visibility = Visibility.Collapsed;
-                    TopDrawer2.SyncButtonsForRiver();
-                    BottomDrawer2.SyncButtonsForRiver();
+                    //TopDrawer2.SyncButtonsForRiver();
+                    //BottomDrawer2.SyncButtonsForRiver();
                 }
                 else if (drawer.Contains("3"))
                 {
                     PlanScatterViewRight.Visibility = Visibility.Collapsed;
-                    TopDrawer3.SyncButtonsForRiver();
-                    BottomDrawer3.SyncButtonsForRiver();
+                    //TopDrawer3.SyncButtonsForRiver();
+                    //BottomDrawer3.SyncButtonsForRiver();
                 }
             }
             else if (DiscussScatterView.Visibility == Visibility.Visible)//we were presenting
             {
                 DiscussScatterView.Visibility = Visibility.Collapsed;
 
-                TopDrawer1.SyncButtonsOutOfAudience();
-                BottomDrawer1.SyncButtonsOutOfAudience();
-                TopDrawer2.SyncButtonsOutOfAudience();
-                BottomDrawer2.SyncButtonsOutOfAudience();
-                TopDrawer3.SyncButtonsOutOfAudience();
-                BottomDrawer3.SyncButtonsOutOfAudience();
-                SyncButtons("river");
+                //TopDrawer1.SyncButtonsOutOfAudience();
+                //BottomDrawer1.SyncButtonsOutOfAudience();
+                //TopDrawer2.SyncButtonsOutOfAudience();
+                //BottomDrawer2.SyncButtonsOutOfAudience();
+                //TopDrawer3.SyncButtonsOutOfAudience();
+                //BottomDrawer3.SyncButtonsOutOfAudience();
+                //SyncButtons("river");
             }
         }
 
@@ -906,13 +911,13 @@ namespace BeastPhotoRiver
                 }
                 DiscussScatterView.Visibility = Visibility.Collapsed;
 
-                TopDrawer1.SyncButtonsOutOfAudience();
-                BottomDrawer1.SyncButtonsOutOfAudience();
-                TopDrawer2.SyncButtonsOutOfAudience();
-                BottomDrawer2.SyncButtonsOutOfAudience();
-                TopDrawer3.SyncButtonsOutOfAudience();
-                BottomDrawer3.SyncButtonsOutOfAudience();
-                SyncButtons("plan");
+                //TopDrawer1.SyncButtonsOutOfAudience();
+                //BottomDrawer1.SyncButtonsOutOfAudience();
+                //TopDrawer2.SyncButtonsOutOfAudience();
+                //BottomDrawer2.SyncButtonsOutOfAudience();
+                //TopDrawer3.SyncButtonsOutOfAudience();
+                //BottomDrawer3.SyncButtonsOutOfAudience();
+                //SyncButtons("plan");
 
             }
             else //we were in the river
@@ -921,22 +926,22 @@ namespace BeastPhotoRiver
                 {
                     GrabAllCopiedCards(RiverScatterView, PlanScatterViewLeft);
                     PlanScatterViewLeft.Visibility = Visibility.Visible;
-                    TopDrawer1.SyncButtonForPlan();
-                    BottomDrawer1.SyncButtonForPlan();
+                    //TopDrawer1.SyncButtonForPlan();
+                    //BottomDrawer1.SyncButtonForPlan();
                 }
                 else if (drawer.Contains("2"))
                 {
                     GrabAllCopiedCards(RiverScatterView, PlanScatterViewMiddle);
                     PlanScatterViewMiddle.Visibility = Visibility.Visible;
-                    TopDrawer2.SyncButtonForPlan();
-                    BottomDrawer2.SyncButtonForPlan();
+                    //TopDrawer2.SyncButtonForPlan();
+                    //BottomDrawer2.SyncButtonForPlan();
                 }
                 else if (drawer.Contains("3"))
                 {
                     GrabAllCopiedCards(RiverScatterView, PlanScatterViewRight);
                     PlanScatterViewRight.Visibility = Visibility.Visible;
-                    TopDrawer3.SyncButtonForPlan();
-                    BottomDrawer3.SyncButtonForPlan();
+                    //TopDrawer3.SyncButtonForPlan();
+                    //BottomDrawer3.SyncButtonForPlan();
                 }
             }
         }
@@ -980,13 +985,13 @@ namespace BeastPhotoRiver
             }
             DiscussScatterView.Visibility = Visibility.Visible;
 
-            TopDrawer1.SyncButtonsAsPresenter();
-            BottomDrawer1.SyncButtonsAsPresenter();
+            //TopDrawer1.SyncButtonsAsPresenter();
+            //BottomDrawer1.SyncButtonsAsPresenter();
 
-            TopDrawer2.SyncButtonsAsAudience();
-            BottomDrawer2.SyncButtonsAsAudience();
-            TopDrawer3.SyncButtonsAsAudience();
-            BottomDrawer3.SyncButtonsAsAudience();
+            //TopDrawer2.SyncButtonsAsAudience();
+            //BottomDrawer2.SyncButtonsAsAudience();
+            //TopDrawer3.SyncButtonsAsAudience();
+            //BottomDrawer3.SyncButtonsAsAudience();
 
 
         }
@@ -1031,14 +1036,14 @@ namespace BeastPhotoRiver
             }
             DiscussScatterView.Visibility = Visibility.Visible;
 
-            TopDrawer1.SyncButtonsAsAudience();
-            BottomDrawer1.SyncButtonsAsAudience();
+            //TopDrawer1.SyncButtonsAsAudience();
+            //BottomDrawer1.SyncButtonsAsAudience();
 
-            TopDrawer2.SyncButtonsAsPresenter();
-            BottomDrawer2.SyncButtonsAsPresenter();
+            //TopDrawer2.SyncButtonsAsPresenter();
+            //BottomDrawer2.SyncButtonsAsPresenter();
            
-            TopDrawer3.SyncButtonsAsAudience();
-            BottomDrawer3.SyncButtonsAsAudience();
+            //TopDrawer3.SyncButtonsAsAudience();
+            //BottomDrawer3.SyncButtonsAsAudience();
 
         }
 
@@ -1081,14 +1086,14 @@ namespace BeastPhotoRiver
             }
             DiscussScatterView.Visibility = Visibility.Visible;
 
-            TopDrawer1.SyncButtonsAsAudience();
-            BottomDrawer1.SyncButtonsAsAudience();
+            //TopDrawer1.SyncButtonsAsAudience();
+            //BottomDrawer1.SyncButtonsAsAudience();
 
-            TopDrawer2.SyncButtonsAsAudience();
-            BottomDrawer2.SyncButtonsAsAudience();
+            //TopDrawer2.SyncButtonsAsAudience();
+            //BottomDrawer2.SyncButtonsAsAudience();
 
-            TopDrawer3.SyncButtonsAsPresenter();
-            BottomDrawer3.SyncButtonsAsPresenter();
+            //TopDrawer3.SyncButtonsAsPresenter();
+            //BottomDrawer3.SyncButtonsAsPresenter();
         }
 
         /// <summary>

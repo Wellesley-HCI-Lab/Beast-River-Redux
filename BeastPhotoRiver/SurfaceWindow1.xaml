@@ -12,12 +12,12 @@
     Topmost="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
      
 
-    <Grid x:Name="MainGrid" Width="3240" Height="1850">
+    <Grid x:Name="MainGrid" Width="3240" Height="auto">
              
         <local:River></local:River>
         
         <!--River ScatterView: Holder of all photocards from River-->
-        <s:ScatterView x:Name="RiverScatterView" Background="Transparent" Height="1850">
+        <s:ScatterView x:Name="RiverScatterView" Background="Transparent" Height="auto">
         </s:ScatterView>
 
         <!--PlanScatterView: For 3 teams to discuss layout of photos-->
@@ -42,44 +42,44 @@
             5Center ="395,300" ?-->
 
         <!--Top1-->
-        <local:Drawer x:Name="TopDrawer1"
+        <!--<local:Drawer x:Name="TopDrawer1"
                        Margin="0,-250,2147,1808" 
                        >
 
-        </local:Drawer>
+        </local:Drawer>-->
 
 
         <!--Top2-->
-        <local:Drawer x:Name="TopDrawer2"
+        <!--<local:Drawer x:Name="TopDrawer2"
                        Margin="1097,-250,1043,1808" 
                         >
 
-        </local:Drawer>
+        </local:Drawer>-->
 
         <!--Top3-->
-        <local:Drawer x:Name="TopDrawer3"
+        <!--<local:Drawer x:Name="TopDrawer3"
                        Margin="2193,-250,13,1810" 
                        >
 
-        </local:Drawer>
+        </local:Drawer>-->
 
         <!--Top4-->
         <!--Bottom1-->
-        <local:Drawer x:Name="BottomDrawer1"
+        <!--<local:Drawer x:Name="BottomDrawer1"
                       Margin="0,1787,2160,-150" Visibility="Hidden">
-        </local:Drawer>
+        </local:Drawer>-->
                           
         
         
         <!--Bottom2-->
-        <local:Drawer x:Name="BottomDrawer2"
+        <!--<local:Drawer x:Name="BottomDrawer2"
                       Margin="1080,1787,1080,-150">
-        </local:Drawer>
+        </local:Drawer>-->
 
         <!--Bottom3-->
-        <local:Drawer x:Name="BottomDrawer3"
+        <!--<local:Drawer x:Name="BottomDrawer3"
                        Margin="0,1787,28,-150" HorizontalAlignment="Right" Width="1050">
-        </local:Drawer>
+        </local:Drawer>-->
 
 
 

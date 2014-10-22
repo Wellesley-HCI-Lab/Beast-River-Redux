@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeastPhotoRiver", "BeastPhotoRiver\BeastPhotoRiver.csproj", "{F7256A6D-9CA9-4249-83E1-92072D2C4D86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoRiverRedux", "BeastPhotoRiver\PhotoRiverRedux.csproj", "{F7256A6D-9CA9-4249-83E1-92072D2C4D86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
