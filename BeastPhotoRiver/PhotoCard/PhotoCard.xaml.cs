@@ -208,16 +208,16 @@ namespace BeastPhotoRiver.PhotoCard
         private void TagButton_Click(object sender, RoutedEventArgs e)
         {
             SurfaceButton tagButton = sender as SurfaceButton;
-            if (this.TagList.Contains(tagButton.Content.ToString()))
-            {
-                this.TagList.Remove(tagButton.Content.ToString());
-                this.Background = Brushes.Gray;
-            }
-            else
-            {
-                this.TagList.Add(tagButton.Content.ToString());
-                tagButton.Background = Brushes.CornflowerBlue;
-            }
+            //if (this.TagList.Contains(tagButton.Content.ToString()))
+            //{
+            //    this.TagList.Remove(tagButton.Content.ToString());
+            //    this.Background = Brushes.Gray;
+            //}
+            //else
+            //{
+            //    this.TagList.Add(tagButton.Content.ToString());
+            //    tagButton.Background = Brushes.CornflowerBlue;
+            //}
         }
 #endregion    
     }

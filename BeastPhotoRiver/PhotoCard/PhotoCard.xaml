@@ -60,20 +60,6 @@
             
             <Image x:Name="imgFront"
                    Stretch="Fill" Margin="5,5,5,5" />
-
-            <s:SurfaceButton 
-                x:Name="CloseButton"
-                Content="X"
-                Background="Firebrick" 
-                VerticalAlignment="Top" 
-                HorizontalAlignment="Right"
-                VerticalContentAlignment="Center"
-                HorizontalContentAlignment="Center"
-                Height="31" Width="31" 
-                Click="CloseButton_Click" Margin="0,12,9,0" MinHeight="20" MinWidth="20" Padding="1">
-                
-            </s:SurfaceButton>
-
             <s:SurfaceButton
                 x:Name="VoteButton"
                 Visibility="Visible"
@@ -82,7 +68,7 @@
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 Margin="3,299,3,1"  
-                Content="Write your thoughts about pic" 
+                Content="flip card" 
                 Click="VoteButton_Click"/>
 
             <!--end Front Grid. If you want to style the back grid, put it after this-->
@@ -136,14 +122,14 @@
             <s:SurfaceButton                 
                 Click="TagButton_Click"
                 FontSize="14"
-                Background="WhiteSmoke"
+                Background="Tomato"
                 Foreground="Black"
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                x:Name="Inspiring"
-                Content="Inspiring"
-                Width="80"
-                Margin="10,77,212,0" Height="38" VerticalAlignment="Top" />
+                x:Name="negResp" Width="180"
+                Margin="10, 10, 10, 10" Height="250" HorizontalAlignment="Right" VerticalAlignment="Top" >
+                <Image Source="/BeastPhotoRiver;component/Resources/down.png"></Image>
+            </s:SurfaceButton>
 
             <!--<s:SurfaceButton                 
                 Click="TagButton_Click"
@@ -185,15 +171,14 @@
             <s:SurfaceButton                 
                 Click="TagButton_Click"
                 FontSize="14"
-                Background="WhiteSmoke"
                 Foreground="Black"
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                x:Name="Pensive"
-                Content="Pensive"
-                Width="80"
-                Margin="212,77,10,0" Height="38" VerticalAlignment="Top" />
-
+                x:Name="posResp"
+                Width="180"
+                Margin="10,10,10,10" Height="250" HorizontalAlignment="Left" VerticalAlignment="Top" Background="SpringGreen">
+                <Image Source="/BeastPhotoRiver;component/Resources/thumb.png"></Image>
+            </s:SurfaceButton>
             <!--<s:SurfaceButton                 
                 Click="TagButton_Click"
                 FontSize="14"
@@ -238,7 +223,7 @@
                 Content="Go Back to Image"                 
                 Click="BackToImageButton_Click"/>
         </Grid>
-        
+        <s:SurfaceButton x:Name="CloseButton" Content="X" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="100" Width="100" Click="CloseButton_Click" Margin="0,-50,-50,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
     </Grid>
     
 </s:ScatterViewItem>

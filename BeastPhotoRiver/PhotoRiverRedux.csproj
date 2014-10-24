@@ -149,6 +149,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\thumb.png" />
     <Resource Include="Resources\wooden-panel.jpg" />
     <Resource Include="Resources\wooden-panel2.jpg" />
     <Resource Include="Resources\wooden-panel3.jpg" />
@@ -167,6 +168,7 @@
     <Resource Include="Resources\brown.jpg" />
     <Resource Include="Resources\geoblack.jpg" />
     <Resource Include="Resources\hall.jpg" />
+    <Resource Include="Resources\down.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
