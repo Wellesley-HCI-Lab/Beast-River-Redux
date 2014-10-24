@@ -60,7 +60,7 @@
             
             <Image x:Name="imgFront"
                    Stretch="Fill" Margin="5,5,5,5" />
-            <s:SurfaceButton
+            <!--<s:SurfaceButton
                 x:Name="VoteButton"
                 Visibility="Visible"
                 Background="WhiteSmoke"
@@ -69,7 +69,7 @@
                 HorizontalContentAlignment="Center"
                 Margin="3,299,3,1"  
                 Content="flip card" 
-                Click="VoteButton_Click"/>
+                Click="VoteButton_Click"/>-->
 
             <!--end Front Grid. If you want to style the back grid, put it after this-->
 
@@ -223,7 +223,9 @@
                 Content="Go Back to Image"                 
                 Click="BackToImageButton_Click"/>
         </Grid>
-        <s:SurfaceButton x:Name="CloseButton" Content="X" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="100" Width="100" Click="CloseButton_Click" Margin="0,-50,-50,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
+        <s:SurfaceButton Visibility="Hidden" x:Name="CloseButton" Content="close" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="150" Width="150" Click="CloseButton_Click" Margin="0,-75,-72,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
+        <s:SurfaceButton Visibility="Hidden" x:Name="YesButton" Background="SpringGreen" Content="yes" Height="153" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,235,-72,0" MinHeight="20" MinWidth="20" Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <s:SurfaceButton Visibility="Hidden" x:Name="NoButton" Background="Tomato" Content="no" Height="148" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,81,-72,0" MinHeight="20" MinWidth="20"  Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
     </Grid>
     
 </s:ScatterViewItem>

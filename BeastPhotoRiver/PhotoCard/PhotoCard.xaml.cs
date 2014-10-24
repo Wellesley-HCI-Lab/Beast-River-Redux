@@ -220,5 +220,14 @@ namespace BeastPhotoRiver.PhotoCard
             //}
         }
 #endregion    
+    
+
+        //makes voting buttons visible, so you can see them when you have a personal copy
+        internal void showButtons()
+        {
+            CloseButton.Visibility = Visibility.Visible;
+            YesButton.Visibility = Visibility.Visible;
+            NoButton.Visibility = Visibility.Visible;
+        }
     }
 }
