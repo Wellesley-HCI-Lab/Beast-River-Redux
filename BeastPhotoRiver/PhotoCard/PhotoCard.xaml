@@ -5,12 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:s="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d"
-             Height="400"
-             Width="400"
-                   Deceleration="500"
-             d:DesignHeight="300" d:DesignWidth="300"
-             Background="Transparent"
-             >
+             
+                   Deceleration="500" Background="Transparent" Height="500" Width="500">
     
     <s:ScatterViewItem.Resources>
         <Storyboard x:Key="sbFlip">
@@ -44,10 +40,9 @@
         </Storyboard>
     </s:ScatterViewItem.Resources>
     
-    
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Height="500" Width="500">
         
-        <Grid x:Name="Front" RenderTransformOrigin="0.5,0.5">
+        <Grid Width="400" Height ="400" x:Name="Front" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <ScaleTransform/>
             </Grid.RenderTransform>
@@ -60,6 +55,7 @@
             
             <Image x:Name="imgFront"
                    Stretch="Fill" Margin="5,5,5,5" />
+            
             <!--<s:SurfaceButton
                 x:Name="VoteButton"
                 Visibility="Visible"
@@ -222,10 +218,11 @@
                 Margin="3, 270, 3, 3" 
                 Content="Go Back to Image"                 
                 Click="BackToImageButton_Click"/>
-        </Grid>
-        <s:SurfaceButton Visibility="Hidden" x:Name="CloseButton" Content="close" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="150" Width="150" Click="CloseButton_Click" Margin="0,-75,-72,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
-        <s:SurfaceButton Visibility="Hidden" x:Name="YesButton" Background="SpringGreen" Content="yes" Height="153" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,235,-72,0" MinHeight="20" MinWidth="20" Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
-        <s:SurfaceButton Visibility="Hidden" x:Name="NoButton" Background="Tomato" Content="no" Height="148" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,81,-72,0" MinHeight="20" MinWidth="20"  Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+            </Grid>
+        <s:SurfaceButton Visibility="Hidden" x:Name="CloseButton" Content="close" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="150" Width="150" Click="CloseButton_Click" Margin="0,-25,-28,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
+        <s:SurfaceButton Visibility="Hidden" x:Name="YesButton" Background="SpringGreen" Content="yes" Height="153" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,364,-28,0" MinHeight="20" MinWidth="20" Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <s:SurfaceButton Visibility="Hidden" x:Name="NoButton" Background="Tomato" Content="no" Height="148" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,210,-28,0" MinHeight="20" MinWidth="20"  Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+
     </Grid>
     
 </s:ScatterViewItem>

@@ -143,6 +143,15 @@ namespace BeastPhotoRiver.PhotoCard
         public PhotoCard()
         {
             InitializeComponent();
+
+            this.ApplyTemplate();
+            this.Background = new SolidColorBrush(Colors.Transparent);
+            this.ShowsActivationEffects = false;
+            this.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            Microsoft.Surface.Presentation.Generic.SurfaceShadowChrome ssc;
+            ssc = this.Template.FindName("shadow", this) as Microsoft.Surface.Presentation.Generic.SurfaceShadowChrome;
+            ssc.Visibility = Visibility.Hidden;
+
             FlipToBack = this.FindResource("sbFlip") as Storyboard;
             FlipToBack.Completed += new EventHandler(sbFlip_Completed);
             FlipToFront = this.FindResource("sbReverse") as Storyboard;

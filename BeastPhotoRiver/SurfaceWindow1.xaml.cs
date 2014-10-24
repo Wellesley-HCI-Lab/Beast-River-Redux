@@ -394,7 +394,10 @@ namespace BeastPhotoRiver
             copyCard.Center = original.Center;
             copyCard.Orientation = original.Orientation;
             copyCard.ContainerManipulationStarted += new ContainerManipulationStartedEventHandler(svi_ContainerManipulationStarted);
+            
+            //buttons for voting and closing appear
             original.showButtons();
+            
             return copyCard;
         }
 
