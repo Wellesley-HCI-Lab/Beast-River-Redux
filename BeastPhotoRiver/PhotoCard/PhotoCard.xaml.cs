@@ -34,7 +34,8 @@ namespace BeastPhotoRiver.PhotoCard
         public string _imageString;
         public event PropertyChangedEventHandler PropertyChanged;
         public Thumbnail _thumbnail;
-
+        public enum vote {yes, no, none};
+        public vote v;
 
         //propertiesm, the getters and setters, the way to reaach ivs
         public List<string> TagList
@@ -133,9 +134,11 @@ namespace BeastPhotoRiver.PhotoCard
             //copy.ImageDescription.Content = this.ImageDescription.Content;
             //copy._score = this._score;
             Thumbnail t = new Thumbnail();
+            copy.v = this.v;
             t.ThumbImage.Source = this.imgFront.Source;
             copy._thumbnail = t;
             copy._thumbnail.MyPhotoCard = this;
+            
             return copy;
         }
          
@@ -159,6 +162,7 @@ namespace BeastPhotoRiver.PhotoCard
             _thumbnail = new Thumbnail();
             _score = new List<string>();
             this.Name = "copy";
+            v = vote.none;
             _thumbnail.MyPhotoCard = this;
         }
 
@@ -237,6 +241,74 @@ namespace BeastPhotoRiver.PhotoCard
             CloseButton.Visibility = Visibility.Visible;
             YesButton.Visibility = Visibility.Visible;
             NoButton.Visibility = Visibility.Visible;
+        }
+
+        private void YesButton_TouchDown(object sender, TouchEventArgs e)
+        {
+            yes();
+        }
+
+        private void yes()
+        {
+            if (v == vote.yes)
+            {
+                YesButton.FontWeight = FontWeights.Normal;
+                YesButton.Background = Brushes.LightSlateGray;
+
+                v = vote.none;
+                //total--
+            }
+            else
+            {
+                YesButton.FontWeight = FontWeights.ExtraBlack;
+                YesButton.Background = Brushes.SpringGreen;
+                NoButton.FontWeight = FontWeights.Normal;
+                NoButton.Background = Brushes.LightSlateGray;
+
+                v = vote.yes;
+                //total++
+            }
+        }
+
+        private void no()
+        {
+            if (v == vote.no)
+            {
+                NoButton.FontWeight = FontWeights.Normal;
+                NoButton.Background = Brushes.LightSlateGray;
+
+                v = vote.none;
+                //total ++
+            }
+            else
+            {
+                NoButton.FontWeight = FontWeights.ExtraBlack;
+                NoButton.Background = Brushes.Tomato;
+                YesButton.FontWeight = FontWeights.Normal;
+                YesButton.Background = Brushes.LightSlateGray;
+
+                v = vote.no;
+                //total --
+            }
+        }
+
+        private void NoButton_TouchDown(object sender, TouchEventArgs e)
+        {
+            no();
+           
+
+        }
+
+        private void NoButton_Click(object sender, RoutedEventArgs e)
+        {
+            no();
+
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            yes();
+
         }
     }
 }

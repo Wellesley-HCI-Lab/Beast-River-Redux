@@ -220,8 +220,8 @@
                 Click="BackToImageButton_Click"/>
             </Grid>
         <s:SurfaceButton Visibility="Hidden" x:Name="CloseButton" Content="close" Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="150" Width="150" Click="CloseButton_Click" Margin="0,-25,-28,0" MinHeight="20" MinWidth="20" Padding="1"></s:SurfaceButton>
-        <s:SurfaceButton Visibility="Hidden" x:Name="YesButton" Background="SpringGreen" Content="yes" Height="153" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,364,-28,0" MinHeight="20" MinWidth="20" Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
-        <s:SurfaceButton Visibility="Hidden" x:Name="NoButton" Background="Tomato" Content="no" Height="148" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,210,-28,0" MinHeight="20" MinWidth="20"  Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <s:SurfaceButton Visibility="Hidden" x:Name="YesButton" Background="LightSlateGray" Content="yes" Height="153" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,364,-28,0" MinHeight="20" MinWidth="20" Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" TouchDown="YesButton_TouchDown" Click="YesButton_Click"/>
+        <s:SurfaceButton Visibility="Hidden" x:Name="NoButton" Background="LightSlateGray" Content="no" Height="148" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,210,-28,0" MinHeight="20" MinWidth="20"  Padding="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" TouchDown="NoButton_TouchDown" Click="NoButton_Click"/>
 
     </Grid>
     
