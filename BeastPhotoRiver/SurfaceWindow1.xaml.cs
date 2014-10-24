@@ -764,60 +764,60 @@ namespace BeastPhotoRiver
             #endregion
 
             #region Activate corresponding keyboard for commenting
-            //IMPORTANT: Make sure keyboard handles specified here match currently connected devices
-            //(Changed for each device and each USB port if applicable)
-            switch (octantNum)
-            {
-                case 1://HP Wireless keyboard 1
-                    ((Keyboard)_keyboardArray[0]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[0]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 2://HP Wireless keyboard 2
-                    ((Keyboard)_keyboardArray[1]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[1]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 3://HP Wireless keyboard 3 
-                    ((Keyboard)_keyboardArray[2]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[2]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 4://HP Wireless keyboard 4
-                    ((Keyboard)_keyboardArray[3]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[3]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 5: //GIGABYTE wired keyboard
-                    ((Keyboard)_keyboardArray[4]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[4]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 6: //Lenovo wired keyboard 1
-                    ((Keyboard)_keyboardArray[5]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[5]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 7: //Lenovo wired keyboard 2
-                    ((Keyboard)_keyboardArray[6]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[6]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                case 8: //Microsoft Bluetooth keyboard
-                    ((Keyboard)_keyboardArray[7]).IsEnabled = true;
-                    ((Keyboard)_keyboardArray[7]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
-                    ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
-                    break;
-                default: break; //if not in octant, do nothing
-            }
+            ////IMPORTANT: Make sure keyboard handles specified here match currently connected devices
+            ////(Changed for each device and each USB port if applicable)
+            //switch (octantNum)
+            //{
+            //    case 1://HP Wireless keyboard 1
+            //        ((Keyboard)_keyboardArray[0]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[0]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 2://HP Wireless keyboard 2
+            //        ((Keyboard)_keyboardArray[1]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[1]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 3://HP Wireless keyboard 3 
+            //        ((Keyboard)_keyboardArray[2]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[2]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 4://HP Wireless keyboard 4
+            //        ((Keyboard)_keyboardArray[3]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[3]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 5: //GIGABYTE wired keyboard
+            //        ((Keyboard)_keyboardArray[4]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[4]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 6: //Lenovo wired keyboard 1
+            //        ((Keyboard)_keyboardArray[5]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[5]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 7: //Lenovo wired keyboard 2
+            //        ((Keyboard)_keyboardArray[6]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[6]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    case 8: //Microsoft Bluetooth keyboard
+            //        ((Keyboard)_keyboardArray[7]).IsEnabled = true;
+            //        ((Keyboard)_keyboardArray[7]).AssociatedCommentArea = ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea; //assign current PhotoCard comment area to current Keyboard
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Background = new SolidColorBrush(Colors.White); //change comment area to indicate mode change
+            //        ((PhotoCard.PhotoCard)originalSVI.Content).CommentArea.Focus();//reassign focus so button doens't blink
+            //        break;
+            //    default: break; //if not in octant, do nothing
+            //}
 
             #endregion
 
